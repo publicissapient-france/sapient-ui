@@ -1,0 +1,5 @@
+{
+  "name": "sapient-ui",
+  "private": true,
+  "workspaces": ["packages/*", "examples/*"]
+}
