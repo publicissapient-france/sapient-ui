@@ -1,0 +1,25 @@
+:host {
+  display: inline-block;
+  border-radius: 0;
+  border: 0;
+  box-shadow: none;
+  padding: 2px 50px 0 50px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: system-ui, serif;
+  width: fit-content !important;
+  background: var(--background-default, #08d5f2);
+  margin: auto;
+  letter-spacing: 1px;
+  line-height: 48px;
+  color: white;
+  text-transform: uppercase;
+  height: 50px;
+  transition: 0.3s !important;
+  text-align: center;
+  cursor: pointer;
+}
+
+:host(:hover) {
+  background-color: var(---background-hover, #08D5A0);
+}
