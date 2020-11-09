@@ -19,3 +19,77 @@ This library is split in different packages:
     - [react](https://github.com/xebia-france/sapient-ui/tree/master/packages/react): the react project wrapper
 
 This repository use [Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces) to easily link all packages together.
+
+# Contribute
+
+You need to clone this repository.
+
+## Install
+
+Install dependencies and link module with:
+
+```
+yarn install
+```
+
+Yarn Workspaces will create symlinks for all modules listed in property `workspaces` of root `package.json`.
+
+## Build
+
+To get started you should build all library modules that are define in `packages/`.
+
+With this command in root folder:
+
+```
+yarn build
+```
+
+or in watch mode if you want to edit the code:
+
+```
+yarn build:watch
+```
+
+In that case it should be more readable to run each module in different terminal.
+
+## Try your components
+
+There are different ways to try your components.
+
+### In Stencil Sandbox
+
+You can use any component in `packages/core/src/index.html`.
+
+In that case you should run stencil server like this:
+
+```
+cd packags/core
+yarn start
+```
+
+Hot reload not working very well is that mode, alternatively you can refresh your tab.
+
+### In React App example
+
+You can edit the code in `examples/react-app` as you want and run it with:
+
+```
+cd examples/react-app
+yarn start
+```
+
+This app has already the dependencies to `sapient-ui-core` and `sapient-ui-react`.
+
+### Other ways
+
+Feel free to imagine another way, what about:
+
+- Create a vue app ?
+- Create an Angular app ?
+- And so on 
+
+## Commit
+
+Let's make a branch and submit a [PR](https://github.com/xebia-france/sapient-ui/pulls). Don't hesitate to notify #pod-web-components to let other know 😉.
+
+Enjoy 🥳.
