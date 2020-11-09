@@ -8,6 +8,15 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface SuiButton {
     }
+    interface SuiJumboContainer {
+    }
+    interface SuiJumbotron {
+        "alt": string;
+        "direction": string;
+        "heading": string;
+        "image": string;
+        "text": string;
+    }
 }
 declare global {
     interface HTMLSuiButtonElement extends Components.SuiButton, HTMLStencilElement {
@@ -16,15 +25,40 @@ declare global {
         prototype: HTMLSuiButtonElement;
         new (): HTMLSuiButtonElement;
     };
+    interface HTMLSuiJumboContainerElement extends Components.SuiJumboContainer, HTMLStencilElement {
+    }
+    var HTMLSuiJumboContainerElement: {
+        prototype: HTMLSuiJumboContainerElement;
+        new (): HTMLSuiJumboContainerElement;
+    };
+    interface HTMLSuiJumbotronElement extends Components.SuiJumbotron, HTMLStencilElement {
+    }
+    var HTMLSuiJumbotronElement: {
+        prototype: HTMLSuiJumbotronElement;
+        new (): HTMLSuiJumbotronElement;
+    };
     interface HTMLElementTagNameMap {
         "sui-button": HTMLSuiButtonElement;
+        "sui-jumbo-container": HTMLSuiJumboContainerElement;
+        "sui-jumbotron": HTMLSuiJumbotronElement;
     }
 }
 declare namespace LocalJSX {
     interface SuiButton {
     }
+    interface SuiJumboContainer {
+    }
+    interface SuiJumbotron {
+        "alt"?: string;
+        "direction"?: string;
+        "heading"?: string;
+        "image"?: string;
+        "text"?: string;
+    }
     interface IntrinsicElements {
         "sui-button": SuiButton;
+        "sui-jumbo-container": SuiJumboContainer;
+        "sui-jumbotron": SuiJumbotron;
     }
 }
 export { LocalJSX as JSX };
@@ -32,6 +66,8 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "sui-button": LocalJSX.SuiButton & JSXBase.HTMLAttributes<HTMLSuiButtonElement>;
+            "sui-jumbo-container": LocalJSX.SuiJumboContainer & JSXBase.HTMLAttributes<HTMLSuiJumboContainerElement>;
+            "sui-jumbotron": LocalJSX.SuiJumbotron & JSXBase.HTMLAttributes<HTMLSuiJumbotronElement>;
         }
     }
 }

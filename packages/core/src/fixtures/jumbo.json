@@ -1,0 +1,29 @@
+[
+  {
+    "gid": 1,
+    "heading": "Corrupti quos dolores et quas molestias excepturi sint occaecati",
+    "text": "Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Corrupti quos dolores et quas molestias excepturi sint occaecati. Architecto beatae vitae dicta sunt explicabo. Architecto beatae vitae dicta sunt explicabo.",
+    "image": "desktop-macbook-md.jpg",
+    "alt": "Eaque ipsa quae ab illo inventore veritatis et quasi.",
+    "direction": "row",
+    "size": "boxed"
+  },
+  {
+    "gid": 2,
+    "heading": "Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+    "text": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque. Nisi ut aliqugid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam.",
+    "image": "girl-alone-md.jpg",
+    "alt": "Corrupti quos dolores et quas molestias excepturi sint occaecati",
+    "direction": "row-reverse",
+    "size": "full-width"
+  },
+  {
+    "gid": 3,
+    "heading": "Architecto beatae vitae dicta sunt explicabo.",
+    "text": "Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Architecto beatae vitae dicta sunt explicabo. Esse cillum dolore eu fugiat nulla pariatur. Do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "image": "satelite-md.jpg",
+    "alt": "Totam rem aperiam.",
+    "direction": "row",
+    "size": "boxed"
+  }
+]
