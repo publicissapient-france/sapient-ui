@@ -29,6 +29,8 @@
   "devDependencies": {
     "@stencil/react-output-target": "^0.0.9",
     "@types/puppeteer": "5.4.0",
-    "puppeteer": "5.4.1"
+    "node-sass": "5.0.0",
+    "puppeteer": "5.4.1",
+    "stencil-node-sass": "1.1.3"
   }
 }

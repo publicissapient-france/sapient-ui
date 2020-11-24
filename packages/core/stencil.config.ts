@@ -1,8 +1,17 @@
 import { Config } from '@stencil/core';
 import { reactOutputTarget } from '@stencil/react-output-target';
+import { sass } from 'stencil-node-sass';
 
 export const config: Config = {
   namespace: 'core',
+  plugins: [
+    sass({
+      injectGlobalPaths: [
+        'src/global/styles/variables.scss',
+        'src/global/styles/mixins.scss'
+      ]
+    })
+  ],
   outputTargets: [
     {
       type: 'dist',
@@ -22,5 +31,5 @@ export const config: Config = {
       componentCorePackage: 'sapient-ui-core',
       proxiesFile: '../react/src/components.ts',
     }),
-  ],
+  ]
 };
