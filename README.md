@@ -10,86 +10,89 @@ Web components library for Sapient Design System.
 
 It's built on top of [Stenciljs](https://stenciljs.com/).
 
-# Organization
+## Installation
+
+Install dependencies and link module with:
+
+```bash
+yarn install
+```
+
+Note: [Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces) will create symlinks for all modules listed in property `workspaces` of root `package.json`.
+
+## Usage
+
+### Folders structure
 
 This library is split in different packages:
+
 - [examples](https://github.com/xebia-france/sapient-ui/tree/master/examples): some example apps that use the components
 - [packages/](https://github.com/xebia-france/sapient-ui/tree/master/packages)
     - [core](https://github.com/xebia-france/sapient-ui/tree/master/packages/core): the stencil project where web components implementation lives
     - [react](https://github.com/xebia-france/sapient-ui/tree/master/packages/react): the react project wrapper
 
-This repository use [Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces) to easily link all packages together.
+### Build
 
-# Contribute
-
-You need to clone this repository.
-
-## Install
-
-Install dependencies and link module with:
-
-```
-yarn install
-```
-
-Yarn Workspaces will create symlinks for all modules listed in property `workspaces` of root `package.json`.
-
-## Build
-
-To get started you should build all library modules that are define in `packages/`.
+To get started, you should build all library modules that are define in `packages/`.
 
 With this command in root folder:
 
-```
+```bash
 yarn build
 ```
 
-or in watch mode if you want to edit the code:
+or if you want to edit the code in watch mode:
 
-```
+```bash
 yarn build:watch
 ```
 
 In that case it should be more readable to run each module in different terminal.
 
-## Try your components
+### Try your components
 
-There are different ways to try your components.
+There are many ways to try your components.
 
-### In Stencil Sandbox
+#### In Stencil Sandbox
 
-You can use any component in `packages/core/src/index.html`.
+You can use any component in `packages/core/src/index.html`. In that case, you should run stencil server like this:
 
-In that case you should run stencil server like this:
-
-```
-cd packags/core
+```bash
+cd packages/core
 yarn start
 ```
 
-Hot reload not working very well is that mode, alternatively you can refresh your tab.
+Note: Hot reload is not working very well in this mode, alternatively you can refresh your browser's tab.
 
-### In React App example
+#### In React App example
 
 You can edit the code in `examples/react-app` as you want and run it with:
 
-```
+```bash
 cd examples/react-app
 yarn start
 ```
 
-This app has already the dependencies to `sapient-ui-core` and `sapient-ui-react`.
+This app already depends on `sapient-ui-core` and `sapient-ui-react`.
 
-### Other ways
+#### Other ways
 
 Feel free to imagine another way, what about:
 
-- Create a vue app ?
+- Create a Vue app ?
 - Create an Angular app ?
 - And so on 
 
-## Commit
+### Storybook
 
-Let's make a branch and submit a [PR](https://github.com/xebia-france/sapient-ui/pulls). Don't hesitate to notify #pod-web-components to let other know 😉.
+```bash
+cd packages/core
+yarn build:watch
+yarn storybook
+```
+
+## Contributing
+
+Let's make a branch and submit a [PR](https://github.com/xebia-france/sapient-ui/pulls). Don't hesitate to notify `#pod-web-components` to let other know 😉.
 
 Enjoy 🥳.

@@ -8,3 +8,4 @@ import type { JSX } from 'sapient-ui-core';
 
 
 export const SuiButton = /*@__PURE__*/createReactComponent<JSX.SuiButton, HTMLSuiButtonElement>('sui-button');
+export const SuiFoo = /*@__PURE__*/createReactComponent<JSX.SuiFoo, HTMLSuiFooElement>('sui-foo');
