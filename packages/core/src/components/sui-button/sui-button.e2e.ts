@@ -1,32 +1,39 @@
-import { newE2EPage } from '@stencil/core/testing';
+import {newE2EPage} from '@stencil/core/testing';
 
-describe('my-component', () => {
-  it('renders', async () => {
+describe('sui-button', () => {
+  it('should apply customized background color', async () => {
+    // GIVEN
     const page = await newE2EPage();
 
-    await page.setContent('<my-component></my-component>');
-    const element = await page.find('my-component');
-    expect(element).toHaveClass('hydrated');
+    await page.setContent(`
+        <sui-button style="--background-default: rgb(200, 0, 0)"></sui-button>
+    `);
+    const element = await page.find('sui-button');
+
+    // THEN
+    const style = await element.getComputedStyle();
+    expect(style.backgroundColor).toEqualColor('rgb(200, 0, 0)')
   });
 
-  it('renders changes to the name data', async () => {
+  it('should apply customized background color on hover', async () => {
+    // GIVEN
     const page = await newE2EPage();
 
-    await page.setContent('<my-component></my-component>');
-    const component = await page.find('my-component');
-    const element = await page.find('my-component >>> div');
-    expect(element.textContent).toEqual(`Hello, World! I'm `);
+    await page.setContent(`
+        <sui-button
+        style="--background-hover: #FF0000">
+        </sui-button>
+    `);
+    const element = await page.find('sui-button');
 
-    component.setProperty('first', 'James');
-    await page.waitForChanges();
-    expect(element.textContent).toEqual(`Hello, World! I'm James`);
+    // WHEN
+    const animation_duration = 300
 
-    component.setProperty('last', 'Quincy');
-    await page.waitForChanges();
-    expect(element.textContent).toEqual(`Hello, World! I'm James Quincy`);
+    await element.hover()
+    await page.waitForTimeout(animation_duration)
 
-    component.setProperty('middle', 'Earl');
-    await page.waitForChanges();
-    expect(element.textContent).toEqual(`Hello, World! I'm James Earl Quincy`);
+    // THEN
+    const style = await element.getComputedStyle();
+    expect(style.backgroundColor).toEqualColor('#FF0000')
   });
 });
