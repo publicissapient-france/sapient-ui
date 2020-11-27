@@ -31,5 +31,10 @@ export const config: Config = {
       componentCorePackage: 'sapient-ui-core',
       proxiesFile: '../react/src/components.ts',
     }),
-  ]
+  ],
+  testing: {
+    setupFilesAfterEnv: [
+      '<rootDir>/src/tests/custom-matchers.ts'
+    ]
+  },
 };

@@ -1,36 +1,26 @@
-import { newSpecPage } from '@stencil/core/testing';
-import { SuiButton } from './sui-button';
+import {newSpecPage} from '@stencil/core/testing';
+import {SuiButton} from './sui-button';
 
-describe('my-component', () => {
-  it('renders', async () => {
-    const { root } = await newSpecPage({
+describe('sui-button', () => {
+  it('should render component as expected', async () => {
+    // GIVEN
+    const {root} = await newSpecPage({
       components: [SuiButton],
-      html: '<my-component></my-component>',
+      html: `
+      <sui-button>
+        My <strong>button</strong> title
+      </sui-button>
+       `,
     });
-    expect(root).toEqualHtml(`
-      <my-component>
-        <mock:shadow-root>
-          <div>
-            Hello, World! I'm
-          </div>
-        </mock:shadow-root>
-      </my-component>
-    `);
-  });
 
-  it('renders with values', async () => {
-    const { root } = await newSpecPage({
-      components: [SuiButton],
-      html: `<my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>`,
-    });
+    // THEN
     expect(root).toEqualHtml(`
-      <my-component first="Stencil" last="'Don't call me a framework' JS">
+      <sui-button>
         <mock:shadow-root>
-          <div>
-            Hello, World! I'm Stencil 'Don't call me a framework' JS
-          </div>
+          <slot />
         </mock:shadow-root>
-      </my-component>
+        My <strong>button</strong> title
+      </sui-button>
     `);
   });
 });

@@ -1,3 +1,4 @@
 html {
-  ---background-hover: red;
+  --background-hover: red;
+  --background-default: blue;
 }
