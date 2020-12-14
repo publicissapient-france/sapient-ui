@@ -1,5 +1,16 @@
 {
   "name": "sapient-ui",
   "private": true,
-  "workspaces": ["packages/*", "examples/*"]
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+  "scripts": {
+    "build:core": "cd packages/core && yarn build",
+    "build:core:watch": "cd packages/core && yarn build:watch",
+    "build:react": "cd packages/react && yarn build",
+    "build:react:watch": "cd packages/react && yarn build:watch",
+    "build": "yarn build:core; yarn build:react",
+    "build:watch": "yarn build:core:watch & yarn build:react:watch"
+  }
 }

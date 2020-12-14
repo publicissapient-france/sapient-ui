@@ -10,12 +10,89 @@ Web components library for Sapient Design System.
 
 It's built on top of [Stenciljs](https://stenciljs.com/).
 
-# Organization
+## Installation
+
+Install dependencies and link module with:
+
+```bash
+yarn install
+```
+
+Note: [Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces) will create symlinks for all modules listed in property `workspaces` of root `package.json`.
+
+## Usage
+
+### Folders structure
 
 This library is split in different packages:
+
 - [examples](https://github.com/xebia-france/sapient-ui/tree/master/examples): some example apps that use the components
 - [packages/](https://github.com/xebia-france/sapient-ui/tree/master/packages)
     - [core](https://github.com/xebia-france/sapient-ui/tree/master/packages/core): the stencil project where web components implementation lives
     - [react](https://github.com/xebia-france/sapient-ui/tree/master/packages/react): the react project wrapper
 
-This repository use [Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces) to easily link all packages together.
+### Build
+
+To get started, you should build all library modules that are define in `packages/`.
+
+With this command in root folder:
+
+```bash
+yarn build
+```
+
+or if you want to edit the code in watch mode:
+
+```bash
+yarn build:watch
+```
+
+In that case it should be more readable to run each module in different terminal.
+
+### Try your components
+
+There are many ways to try your components.
+
+#### In Stencil Sandbox
+
+You can use any component in `packages/core/src/index.html`. In that case, you should run stencil server like this:
+
+```bash
+cd packages/core
+yarn start
+```
+
+Note: Hot reload is not working very well in this mode, alternatively you can refresh your browser's tab.
+
+#### In React App example
+
+You can edit the code in `examples/react-app` as you want and run it with:
+
+```bash
+cd examples/react-app
+yarn start
+```
+
+This app already depends on `sapient-ui-core` and `sapient-ui-react`.
+
+#### Other ways
+
+Feel free to imagine another way, what about:
+
+- Create a Vue app ?
+- Create an Angular app ?
+- And so on 
+
+### Storybook
+
+```bash
+cd packages/core
+yarn build:watch
+yarn storybook
+```
+
+## Contributing
+
+Let's make a branch and submit a [PR](https://github.com/xebia-france/sapient-ui/pulls). Don't hesitate to notify `#pod-web-components` to let other know 😉.
+
+Enjoy 🥳.

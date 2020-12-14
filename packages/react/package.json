@@ -10,9 +10,10 @@
   },
   "scripts": {
     "build": "npm run clean && npm run compile",
+    "build:watch": "npm run clean && npm run compile:watch",
     "clean": "rm -rf dist",
-    "compile": "npm run tsc",
-    "tsc": "tsc -p .",
+    "compile": "tsc -p .",
+    "compile:watch": "tsc -w -p .",
     "rollup": "rollup -c"
   },
   "main": "dist/index.js",
