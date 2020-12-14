@@ -4,10 +4,10 @@ import { sass } from 'stencil-node-sass';
 
 export const config: Config = {
   namespace: 'core',
+  globalStyle: 'src/global/styles/variables.css',
   plugins: [
     sass({
       injectGlobalPaths: [
-        'src/global/styles/variables.scss',
         'src/global/styles/mixins.scss'
       ]
     })
