@@ -1,0 +1,36 @@
+version: 2.1
+
+jobs:
+  deploy-dev:
+    executor:
+      name: node/default
+      tag: "12.19"
+    steps:
+      - checkout
+      - restore_cache:
+          key: yarn-{{ checksum "yarn.lock" }}
+      - node/install-packages:
+          pkg-manager: yarn
+          with-cache: false
+      - save_cache:
+          key: yarn-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules
+            - packages/core/node_modules
+            - packages/react/node_modules
+            - examples/react-app/node_modules
+      - run: yarn build:core-storybook
+      - run: yarn deploy --token $FIREBASE_TOKEN
+
+orbs:
+  node: circleci/node@4.1.0
+
+workflows:
+  version: 2
+  sapient-ui:
+    jobs:
+      - deploy-dev:
+          context: "sapient-ui"
+          filters:
+            branches:
+              only: "master"

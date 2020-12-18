@@ -49,6 +49,16 @@ yarn build:watch
 
 In that case it should be more readable to run each module in different terminal.
 
+### Deploy Storybook 📖
+Storybook is deployed using Firebase Hosting.
+
+```bash
+yarn deploy
+```
+
+To test deployment locally you must log the CLI into Firebase with `./node_modules/.bin/firebase login`
+after being added to the corresponding Firebase projects (see `.firebaserc` file to see project names).
+
 ### Try your components
 
 There are many ways to try your components.
