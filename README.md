@@ -93,6 +93,6 @@ yarn storybook
 
 ## Contributing
 
-Let's make a branch and submit a [PR](https://github.com/xebia-france/sapient-ui/pulls). Don't hesitate to notify `#pod-web-components` to let other know 😉.
+Let's make a branch and submit a [PR](https://github.com/xebia-france/sapient-ui/pulls). Don't hesitate to notify `#pod-web-components` to let others know 😉.
 
 Enjoy 🥳.

@@ -22,19 +22,14 @@
   "files": [
     "dist/"
   ],
-  "devDependencies": {
-    "sapient-ui-core": "^1.0.0",
-    "@types/node": "^14.0.14",
-    "@types/react": "^16.9.36",
-    "@types/react-dom": "^16.9.8",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "typescript": "^3.9.5"
-  },
   "peerDependencies": {
-    "sapient-ui-core": "^1.0.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "sapient-ui-core": "*",
+    "@types/node": "*",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "react": "*",
+    "react-dom": "*",
+    "typescript": "*"
   },
   "jest": {
     "preset": "ts-jest",
