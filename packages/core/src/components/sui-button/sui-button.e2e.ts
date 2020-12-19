@@ -6,13 +6,13 @@ describe('sui-button', () => {
     const page = await newE2EPage();
 
     await page.setContent(`
-        <sui-button style="--background-default: rgb(200, 0, 0)"></sui-button>
+        <sui-button style="--sui-button-background: blue"></sui-button>
     `);
     const element = await page.find('sui-button');
 
     // THEN
     const style = await element.getComputedStyle();
-    expect(style.backgroundColor).toEqualColor('rgb(200, 0, 0)')
+    expect(style.backgroundColor).toEqualColor('blue')
   });
 
   it('should apply customized background color on hover', async () => {
@@ -21,16 +21,16 @@ describe('sui-button', () => {
 
     await page.setContent(`
         <sui-button
-        style="--background-hover: #FF0000">
+        style="--sui-button-hover-background: #FF0000">
         </sui-button>
     `);
     const element = await page.find('sui-button');
 
     // WHEN
-    const animation_duration = 300
+    const animationDuration = 300
 
     await element.hover()
-    await page.waitForTimeout(animation_duration)
+    await page.waitForTimeout(animationDuration)
 
     // THEN
     const style = await element.getComputedStyle();

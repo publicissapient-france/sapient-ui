@@ -1,4 +1,4 @@
 html {
-  --background-hover: red;
-  --background-default: blue;
+  --sui-button-background: blue;
+  --sui-button-hover-background: red;
 }
