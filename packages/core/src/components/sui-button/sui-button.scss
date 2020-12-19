@@ -7,19 +7,19 @@
   font-size: 16px;
   font-weight: 600;
   font-family: system-ui, serif;
-  width: fit-content !important;
-  background: var(--background-default, #08d5f2);
+  width: fit-content;
+  background: var(--sui-button-background, #08d5f2);
   margin: auto;
   letter-spacing: 1px;
   line-height: 48px;
   color: white;
   text-transform: uppercase;
   height: 50px;
-  transition: 300ms !important;
+  transition: 300ms;
   text-align: center;
   cursor: pointer;
 }
 
 :host(:hover) {
-  background-color: var(---background-hover, #08D5A0);
+  background-color: var(--sui-button-hover-background, #08D5A0);
 }
