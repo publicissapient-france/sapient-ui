@@ -1,0 +1,15 @@
+name: Build
+on: [push]
+
+jobs:
+  Initialize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: Install Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 12.x
+      - name: Build
+        run: ./deploy/build.sh
