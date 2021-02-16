@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   'stories': [
     '../src/**/*.stories.mdx',
@@ -8,5 +10,8 @@ module.exports = {
     '@storybook/addon-actions',
     '@storybook/addon-knobs',
     'storybook-events-logger/dist/register',
+    '@storybook/preset-scss',
+    '@storybook/addon-viewport'
   ],
+
 };

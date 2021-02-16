@@ -1,0 +1,46 @@
+:root {
+  --black-ps: #000000;
+  --blue-ps: #079FFF;
+  --green-ps: #00E6C3;
+  --grey-ps: #B4B4B4;
+  --red-ps: #fe414d;
+  --white-ps: #FFFFFF;
+  --yellow-ps: #FFE63B;
+}
+
+
+@font-face {
+  font-family: 'FuturaNextW05' ;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('FuturaNextW05'),
+  url(../assets/fonts/FuturaNextW05/FuturaNextW05-Book.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'FuturaNextW05' ;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('FuturaNextW05'),
+  url(../assets/fonts/FuturaNextW05/FuturaNextW05-Medium.woff2) format('truetype');
+}
+
+@font-face {
+  font-family: 'FuturaNextW05' ;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('FuturaNextW05'),
+  url(../assets/fonts/FuturaNextW05/FuturaNextW05-DemiBold.woff2) format('truetype');
+}
+
+@font-face {
+  font-family: 'FuturaNextW05' ;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('FuturaNextW05'),
+  url(../assets/fonts/FuturaNextW05/FuturaNextW05-Bold.woff2) format('truetype');
+}

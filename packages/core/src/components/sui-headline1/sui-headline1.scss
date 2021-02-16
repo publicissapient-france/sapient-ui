@@ -1,0 +1,22 @@
+@import "../../styles/mixins";
+
+h1 {
+  font-family: 'FuturaNextW05';
+  font-weight: 400;
+
+  @include phone{
+    font-size: 34px;
+    line-height: 47px;
+  }
+
+
+  @include tablet{
+    font-size: 34px;
+    line-height: 47px;
+  }
+
+  @include desktop{
+    font-size: 50px;
+    line-height: 70px;
+  }
+}

@@ -11,7 +11,9 @@ export namespace Components {
     interface SuiFoo {
         "name": string;
     }
-    interface SuiTitle1 {
+    interface SuiHeadline1 {
+    }
+    interface SuiHeadline2 {
     }
 }
 declare global {
@@ -27,16 +29,23 @@ declare global {
         prototype: HTMLSuiFooElement;
         new (): HTMLSuiFooElement;
     };
-    interface HTMLSuiTitle1Element extends Components.SuiTitle1, HTMLStencilElement {
+    interface HTMLSuiHeadline1Element extends Components.SuiHeadline1, HTMLStencilElement {
     }
-    var HTMLSuiTitle1Element: {
-        prototype: HTMLSuiTitle1Element;
-        new (): HTMLSuiTitle1Element;
+    var HTMLSuiHeadline1Element: {
+        prototype: HTMLSuiHeadline1Element;
+        new (): HTMLSuiHeadline1Element;
+    };
+    interface HTMLSuiHeadline2Element extends Components.SuiHeadline2, HTMLStencilElement {
+    }
+    var HTMLSuiHeadline2Element: {
+        prototype: HTMLSuiHeadline2Element;
+        new (): HTMLSuiHeadline2Element;
     };
     interface HTMLElementTagNameMap {
         "sui-button": HTMLSuiButtonElement;
         "sui-foo": HTMLSuiFooElement;
-        "sui-title1": HTMLSuiTitle1Element;
+        "sui-headline1": HTMLSuiHeadline1Element;
+        "sui-headline2": HTMLSuiHeadline2Element;
     }
 }
 declare namespace LocalJSX {
@@ -46,12 +55,15 @@ declare namespace LocalJSX {
         "name"?: string;
         "onClicked"?: (event: CustomEvent<string>) => void;
     }
-    interface SuiTitle1 {
+    interface SuiHeadline1 {
+    }
+    interface SuiHeadline2 {
     }
     interface IntrinsicElements {
         "sui-button": SuiButton;
         "sui-foo": SuiFoo;
-        "sui-title1": SuiTitle1;
+        "sui-headline1": SuiHeadline1;
+        "sui-headline2": SuiHeadline2;
     }
 }
 export { LocalJSX as JSX };
@@ -60,7 +72,8 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "sui-button": LocalJSX.SuiButton & JSXBase.HTMLAttributes<HTMLSuiButtonElement>;
             "sui-foo": LocalJSX.SuiFoo & JSXBase.HTMLAttributes<HTMLSuiFooElement>;
-            "sui-title1": LocalJSX.SuiTitle1 & JSXBase.HTMLAttributes<HTMLSuiTitle1Element>;
+            "sui-headline1": LocalJSX.SuiHeadline1 & JSXBase.HTMLAttributes<HTMLSuiHeadline1Element>;
+            "sui-headline2": LocalJSX.SuiHeadline2 & JSXBase.HTMLAttributes<HTMLSuiHeadline2Element>;
         }
     }
 }

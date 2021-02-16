@@ -4,6 +4,7 @@ import './index.css';
 import './theme.css';
 import App from './App';
 import { defineCustomElements } from 'sapient-ui-core';
+import 'sapient-ui-core/dist/build/core.css'
 
 ReactDOM.render(
   <React.StrictMode>

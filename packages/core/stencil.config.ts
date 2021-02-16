@@ -4,11 +4,11 @@ import { sass } from 'stencil-node-sass';
 
 export const config: Config = {
   namespace: 'core',
-  globalStyle: 'src/global/styles/variables.css',
+  globalStyle: 'src/styles/variables.css',
   plugins: [
     sass({
       injectGlobalPaths: [
-        'src/global/styles/mixins.scss'
+        'src/styles/mixins.scss'
       ]
     })
   ],
@@ -23,9 +23,16 @@ export const config: Config = {
     {
       type: 'docs-readme',
     },
-    {
+   /* {
       type: 'www',
       serviceWorker: null, // disable service workers
+    },*/
+    {
+      type: 'www',
+      dir: 'dist',
+      copy: [
+        { src: 'assets/fonts', dest: 'assets/fonts' }
+      ]
     },
     reactOutputTarget({
       componentCorePackage: 'sapient-ui-core',
