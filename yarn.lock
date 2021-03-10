@@ -1871,10 +1871,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@stencil/core@^2.0.1":
-  version "2.3.0"
-  resolved "https://registry.npmjs.org/@stencil/core/-/core-2.3.0.tgz#9190df3a0064537730be1546545e13531d701da8"
-  integrity sha512-VZ/Ox0E1kngcmHbJhHUufuLELi+xG3of3LuRI3X2AMWyE82JUVYlOEsQci/YBZWpfc9BS9I36R88prBew22oew==
+"@stencil/core@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.npmjs.org/@stencil/core/-/core-2.0.1.tgz#8f274de7b13499220866632dc4f4286c127b61c7"
+  integrity sha512-LJahm4BjP+6hD35MXyk7kiZWopBGCf3tCYtJELVejUOj7GEzTx3rRNeK2wZkn/D3D68du8SFnU0nD3FpaBzyZA==
 
 "@stencil/react-output-target@^0.0.9":
   version "0.0.9"

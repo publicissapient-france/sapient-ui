@@ -9,8 +9,8 @@
     "url": "https://github.com/ionic-team/ionic.git"
   },
   "scripts": {
-    "build": "npm run clean && npm run compile",
-    "build:watch": "npm run clean && npm run compile:watch",
+    "build": "yarn run clean && yarn run compile",
+    "build:watch": "yarn run clean && yarn run compile:watch",
     "clean": "rm -rf dist",
     "compile": "tsc -p .",
     "compile:watch": "tsc -w -p .",
