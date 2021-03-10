@@ -38,13 +38,13 @@ To get started, you should build all library modules that are define in `package
 With this command in root folder:
 
 ```bash
-yarn build
+yarn build:all
 ```
 
 or if you want to edit the code in watch mode:
 
 ```bash
-yarn build:watch
+yarn build:all:watch
 ```
 
 In that case it should be more readable to run each module in different terminal.
@@ -56,7 +56,7 @@ Storybook is deployed using Firebase Hosting.
 yarn deploy
 ```
 
-To test deployment locally you must log the CLI into Firebase with `./node_modules/.bin/firebase login`
+To test deployment locally you must log the CLI into Firebase with `npx firebase login`
 after being added to the corresponding Firebase projects (see `.firebaserc` file to see project names).
 
 ### Try your components
@@ -83,7 +83,7 @@ cd examples/react-app
 yarn start
 ```
 
-This app already depends on `sapient-ui-core` and `sapient-ui-react`.
+This app already depends on `@sapient-ui/core` and `@sapient-ui/react`.
 
 #### Other ways
 

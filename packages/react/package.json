@@ -1,5 +1,5 @@
 {
-  "name": "sapient-ui-react",
+  "name": "@sapient-ui/react",
   "sideEffects": false,
   "version": "1.0.0",
   "private": true,
@@ -23,7 +23,7 @@
     "dist/"
   ],
   "peerDependencies": {
-    "sapient-ui-core": "*",
+    "@sapient-ui/core": "*",
     "@types/node": "*",
     "@types/react": "*",
     "@types/react-dom": "*",
