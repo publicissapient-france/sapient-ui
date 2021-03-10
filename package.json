@@ -13,7 +13,8 @@
     "build:react:watch": "cd packages/react && yarn build:watch",
     "build:all": "yarn build:core; yarn build:react",
     "build:all:watch": "yarn build:core:watch & yarn build:react:watch",
-    "deploy": "firebase deploy --project=default"
+    "deploy": "firebase deploy --project=default",
+    "publish": "lerna publish"
   },
   "dependencies": {
     "@types/node": "14.14.14",
