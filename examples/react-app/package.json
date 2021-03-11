@@ -1,10 +1,10 @@
 {
   "name": "react-app",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": true,
   "dependencies": {
-    "@sapient-ui/core": "^1.0.2",
-    "@sapient-ui/react": "^1.0.2",
+    "@sapient-ui/core": "^1.0.3",
+    "@sapient-ui/react": "^1.0.3",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",

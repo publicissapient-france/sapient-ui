@@ -1,6 +1,6 @@
 {
   "name": "@sapient-ui/react",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React wrappers for Sapient-UI Web Components library",
   "repository": {
     "type": "git",
