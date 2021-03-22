@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {SuiButton, SuiTitle1} from "sapient-ui-react";
+import {SuiButton, SuiTitle1} from "@sapient-ui/react";
 
 function App() {
   return (

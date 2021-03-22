@@ -28,7 +28,7 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
     reactOutputTarget({
-      componentCorePackage: 'sapient-ui-core',
+      componentCorePackage: '@sapient-ui/core',
       proxiesFile: '../react/src/components.ts',
     }),
   ],

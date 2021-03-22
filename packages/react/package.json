@@ -1,12 +1,14 @@
 {
-  "name": "sapient-ui-react",
-  "sideEffects": false,
-  "version": "1.0.0",
-  "private": true,
-  "description": "React specific wrapper for component-library",
+  "name": "@sapient-ui/react",
+  "version": "1.0.3",
+  "description": "React wrappers for Sapient-UI Web Components library",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ionic-team/ionic.git"
+    "url": "https://github.com/xebia-france/sapient-ui.git",
+    "directory": "packages/react"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "build": "yarn run clean && yarn run compile",
@@ -16,6 +18,7 @@
     "compile:watch": "tsc -w -p .",
     "rollup": "rollup -c"
   },
+  "sideEffects": false,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "source": "src/index.ts",
@@ -23,7 +26,7 @@
     "dist/"
   ],
   "peerDependencies": {
-    "sapient-ui-core": "*",
+    "@sapient-ui/core": "*",
     "@types/node": "*",
     "@types/react": "*",
     "@types/react-dom": "*",
@@ -38,5 +41,6 @@
       "node_modules",
       "dist"
     ]
-  }
+  },
+  "gitHead": "caef4c908ae5d843751f510e67b5c2e806c81c65"
 }
